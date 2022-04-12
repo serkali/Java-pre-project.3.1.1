@@ -56,45 +56,4 @@ public class UserController {
         userService.saveUser(user);
         return "redirect:/";
     }
-   /*@RequestMapping(value = "/", method = RequestMethod.GET)
-   public ModelAndView allUsers() {
-       List<User> users = userService.getAllUsers();
-       ModelAndView modelAndView = new ModelAndView();
-       modelAndView.setViewName("users");
-       modelAndView.addObject("users", users);
-       return modelAndView;
-   }
-
-    @RequestMapping(value = "/add", method = RequestMethod.GET)
-    public String addPage() {
-        return "new_user";
-    }
-
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addUser(@ModelAttribute("user") User user) {
-        userService.saveUser(user);
-        return "redirect:/";
-    }
-
-    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
-    public ModelAndView editPage(@PathVariable("id") long id) {
-        User user = userService.getById(id);
-        ModelAndView modelAndView = new ModelAndView();
-        modelAndView.setViewName("edit_user");
-        modelAndView.addObject("user", user);
-        return modelAndView;
-    }
-
-    @RequestMapping(value = "/edit", method = RequestMethod.POST)
-    public String editUser(@ModelAttribute("user") User user) {
-        userService.saveUser(user);
-        return "redirect:/";
-    }
-
-    @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
-    public String deleteUser(@PathVariable("id") long id) {
-        User user = userService.getById(id);
-        userService.deleteUser(id);
-        return "redirect:/";
-    }*/
 }
